@@ -36,11 +36,6 @@ function reload_() {
     source ${TARGET_DIR}
 }
 
-function createUser_() {
-    CREATE USER 'test1'@'%' IDENTIFIED BY 'sayHell0@!#$';
-    RANT ALL PRIVILEGES ON demo.* TO 'test1'@'%';
-}
-
 checkRootLogin_
 get_
 extract_
