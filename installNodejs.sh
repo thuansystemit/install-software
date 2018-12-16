@@ -2,7 +2,8 @@
 
 function install_() {
     npm install -y nodejs
-    npm install -y npm
+    apt install npm
+    npm install -g angular-cli
 }
 
 install_
