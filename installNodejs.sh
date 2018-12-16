@@ -1,8 +1,9 @@
 #!/bin/bash
 
 function install_() {
-    npm install -y nodejs
-    apt install npm
+    apt-get install -y nodejs
+    apt-get install npm
+    npm install node-gyp -g
     npm install -g angular-cli
 }
 
