@@ -21,7 +21,7 @@ function extract_() {
 }
 
 function copy_() {
-    mv ${JDK_FOLDER} ${TARGET_DIR}
+    mv ${JDK_FOLDER} ${TARGET_DIR}/
 }
 
 function install_() {
@@ -33,12 +33,12 @@ function setupEnviroment_() {
     echo >> ${FILE_ENVIROMENT}
     echo >> ${FILE_ENVIROMENT}
     echo "export JAVA_HOME=${TARGET_DIR}/${JDK_FOLDER}" >> ${FILE_ENVIROMENT}
-    echo "export PATH=$PATH:$JAVA_HOME/bin" >> ${FILE_ENVIROMENT}
+    echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ${FILE_ENVIROMENT}
     echo "export PATH" >> ${FILE_ENVIROMENT}
 }
 
 function reload_() {
-    source ${TARGET_DIR}
+    source ${FILE_ENVIROMENT}
 }
 
 checkRootLogin_
