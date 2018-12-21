@@ -21,19 +21,19 @@ function extract_() {
 }
 
 function copy_() {
-    mv ${DIR_NAME} ${TARGET_DIR}
+    mv ${DIR_NAME} ${TARGET_DIR}/
 }
 
 function setupEnviroment_() {
     echo >> ${FILE_ENVIROMENT}
     echo >> ${FILE_ENVIROMENT}
     echo "export M3_HOME=${FILE_ENVIROMENT}/${DIR_NAME}" >> ${FILE_ENVIROMENT}
-    echo "export PATH=$PATH:$M3_HOME/bin" >> ${FILE_ENVIROMENT}
+    echo "export PATH=\$PATH:\$M3_HOME/bin" >> ${FILE_ENVIROMENT}
     echo "export PATH" >> ${FILE_ENVIROMENT}
 }
 
 function reload_() {
-    source ${TARGET_DIR}
+    source ${FILE_ENVIROMENT}
 }
 
 checkRootLogin_
