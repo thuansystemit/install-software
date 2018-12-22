@@ -2,7 +2,7 @@
 LINK_JDK="https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz"
 JDK_FOLDER="jdk1.8.0_191"
 JDK_FILE_NAME="jdk-8u191-linux-x64.tar.gz"
-FILE_ENVIROMENT="/etc/environment"
+ETC_ENVIROMENT="/etc/environment"
 TARGET_DIR="/opt/tools"
 
 function checkRootLogin_() {
@@ -30,15 +30,15 @@ function install_() {
 }
 
 function setupEnviroment_() {
-    echo >> ${FILE_ENVIROMENT}
-    echo >> ${FILE_ENVIROMENT}
-    echo "export JAVA_HOME=${TARGET_DIR}/${JDK_FOLDER}" >> ${FILE_ENVIROMENT}
-    echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ${FILE_ENVIROMENT}
-    echo "export PATH" >> ${FILE_ENVIROMENT}
+    echo >> ${ETC_ENVIROMENT}
+    echo >> ${ETC_ENVIROMENT}
+    echo "export JAVA_HOME=${TARGET_DIR}/${JDK_FOLDER}" >> ${ETC_ENVIROMENT}
+    echo "export PATH=\$PATH:\$JAVA_HOME/bin" >> ${ETC_ENVIROMENT}
+    echo "export PATH" >> ${ETC_ENVIROMENT}
 }
 
 function reload_() {
-    source ${FILE_ENVIROMENT}
+    source ${ETC_ENVIROMENT}
 }
 
 checkRootLogin_
