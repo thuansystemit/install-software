@@ -3,7 +3,7 @@ LINK_MAVEN="http://mirrors.viethosting.com/apache/maven/maven-3/3.6.0/binaries/a
 FILE_NAME="apache-maven-3.6.0-bin.tar.gz"
 DIR_NAME="apache-maven-3.6.0"
 TARGET_DIR="/opt/tools"
-ETC_ENVIROMENT="/etc/environment"
+ETC_ENVIRONMENT="/etc/environment"
 
 function checkRootLogin_() {
     if [[ $(id -u) -ne 0 ]] ; then
@@ -25,11 +25,11 @@ function copy_() {
 }
 
 function setupEnviroment_() {
-    echo >> ${ETC_ENVIROMENT}
-    echo >> ${ETC_ENVIROMENT}
-    echo "export M3_HOME=${ETC_ENVIROMENT}/${DIR_NAME}" >> ${ETC_ENVIROMENT}
-    echo "export PATH=\$PATH:\$M3_HOME/bin" >> ${ETC_ENVIROMENT}
-    echo "export PATH" >> ${ETC_ENVIROMENT}
+    echo >> ${ETC_ENVIRONMENT}
+    echo >> ${ETC_ENVIRONMENT}
+    echo "export M3_HOME=${ETC_ENVIRONMENT}/${DIR_NAME}" >> ${ETC_ENVIRONMENT}
+    echo "export PATH=\$PATH:\$M3_HOME/bin" >> ${ETC_ENVIRONMENT}
+    echo "export PATH" >> ${ETC_ENVIRONMENT}
 }
 
 function reload_() {
