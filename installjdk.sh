@@ -21,7 +21,7 @@ function extract_() {
 }
 
 function copy_() {
-    mv ${JDK_FOLDER} ${TARGET_DIR}/
+    cp -rf ${JDK_FOLDER} "${TARGET_DIR}/"
 }
 
 function install_() {

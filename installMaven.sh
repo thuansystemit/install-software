@@ -21,7 +21,11 @@ function extract_() {
 }
 
 function copy_() {
-    mv ${DIR_NAME} ${TARGET_DIR}/
+    cp -rf ${DIR_NAME} "${TARGET_DIR}/"
+}
+
+function setLink_(){
+    ln -s ${TARGET_DIR}/${DIR_NAME}/bin/mvn /usr/bin/mvn
 }
 
 function setupEnviroment_() {
@@ -33,7 +37,7 @@ function setupEnviroment_() {
 }
 
 function reload_() {
-    source ${ETC_ENVIROMENT}
+    source ${ETC_ENVIRONMENT}
 }
 
 checkRootLogin_
@@ -41,4 +45,5 @@ get_
 extract_
 copy_
 setupEnviroment_
+setLink_
 reload_
