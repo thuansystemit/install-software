@@ -2,6 +2,7 @@
 function _setup() { 
 	export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_271.jdk/Contents/Home
 	#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.14.jdk/Contents/Home
+	#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-19.jdk/Contents/Home
 	export MAVEN_HOME=/opt/tools/apache-maven-3.6.3/bin
 	export GRADLE_HOME=/opt/tools/gradle-6.7.1/bin
 	export PATH=$MAVEN_HOME:$PATH
