@@ -1,0 +1,5 @@
+- commit code without username and password we only using ssh so that just follow-up the step as below to setup:
++ Step 1: ssh-keygen -t rsa -b 4096 -C "thuan.system@gmail.com"
++ Step 2: Go to Settings -> SSH and GPG keys -> click New ssh key -> at the box we just to copy file id_rsa.pub and save it.
++ Step 3: Go back to terminal and testing with command line as ssh -T git@github.com
+So that have funny
